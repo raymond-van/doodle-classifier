@@ -37,15 +37,4 @@ model.fit(x = x_train, y = y_train, validation_split=0.1, batch_size = 256, verb
 score = model.evaluate(x_test, y_test, verbose=0)
 print('Test accuarcy: {:0.2f}%'.format(score[1] * 100))
 
-import matplotlib.pyplot as plt
-from random import randint
-idx = randint(0, len(x_test))
-img = x_test[idx]
-plt.imshow(img.squeeze()) 
-plt.show()
-pred = model.predict(np.expand_dims(img, axis=0))[0]
-ind = (-pred).argsort()[:5]
-latex = [class_names[x] for x in ind]
-print(latex)
-
 model.save('model/qd_classifier.h5')

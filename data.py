@@ -13,11 +13,8 @@ f.close()
 X = np.load('data/X.npy')
 y = np.load('data/y.npy')
 
-# Plot a random drawing
-# idx = randint(0, len(X)) 
-# print(class_names[int(y[idx].item())])
-# plt.imshow(X[idx].reshape(28,28),cmap='gray')
-# plt.show()
+# Invert image colours
+X = 255 - X
 
 # Reshape and normalize
 X = X.reshape(X.shape[0], 28, 28, 1).astype('float32')
@@ -27,3 +24,9 @@ X /= 255.0
 permutation = np.random.permutation(y.shape[0])
 X = X[permutation, :]
 y = y[permutation]
+
+# Plot a random drawing
+# idx = randint(0, len(X)) 
+# print(class_names[int(y[idx].item())])
+# plt.imshow(X[idx].reshape(28,28),cmap='gray')
+# plt.show()
