@@ -1,0 +1,15 @@
+header {
+    background-color: rgb(88, 166, 211);    
+    color: rgb(12, 11, 11);
+    height: 55px;
+    line-height: 55px;
+    font-size: 26px;
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+}
+
+#canvas {
+    margin-top: 40px;
+    margin-left: 40px;
+    border: 1px solid black;
+}
