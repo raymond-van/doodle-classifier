@@ -16,13 +16,13 @@ function down(e) {
 
 function move(e) {
     if (mouseDown) {
-        ctx.lineTo(e.clientX-40, e.clientY-95);
+        ctx.lineTo(e.clientX-30, e.clientY-85);
         ctx.stroke();
         ctx.beginPath();
-        ctx.arc(e.clientX-40, e.clientY-95, radius, 0, Math.PI*2);
+        ctx.arc(e.clientX-30, e.clientY-85, radius, 0, Math.PI*2);
         ctx.fill();
         ctx.beginPath();
-        ctx.moveTo(e.clientX-40, e.clientY-95);
+        ctx.moveTo(e.clientX-30, e.clientY-85);
     }
 }
 

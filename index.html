@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Quick, draw classifier</title>
+    <title>Doodle Classifier</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="public/stylesheets/normalize.css">
@@ -12,7 +12,9 @@
 <body>
     <header>&nbsp;Simple Doodle Classifier</header>
     <canvas id='canvas' width='300' height='300'></canvas>
-    <button onclick="clearCanvas(canvas);">Clear</button>
+    <div id='button'>
+        <button id='clear' onclick="clearCanvas(canvas);">Clear</button>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
