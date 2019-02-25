@@ -61,7 +61,7 @@ function pixelData(ctx) {
 
 async function load_model() {
     //load the model 
-    model = await tf.loadModel('http://127.0.0.1:8000/model/tfjs_model/model.json')
+    model = await tf.loadModel('model/tfjs_model/model.json')
 }
 
 function predict() {
