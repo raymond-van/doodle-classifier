@@ -35,6 +35,6 @@ print(model.summary())
 model.fit(x = x_train, y = y_train, validation_split=0.1, batch_size = 256, verbose=2, epochs=5)
 
 score = model.evaluate(x_test, y_test, verbose=0)
-print('Test accuarcy: {:0.2f}%'.format(score[1] * 100))
+print('Test accuracy: {:0.2f}%'.format(score[1] * 100))
 
 model.save('model/qd_classifier.h5')

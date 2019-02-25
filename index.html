@@ -14,8 +14,42 @@
 </head>
 <body>
     <header>&nbsp;Doodle Classifier</header>
-    <canvas id='canvas' width='300' height='300'></canvas>
-    <div id='button'>
+    <div id=canvas-container>
+        <canvas id='canvas' width='300' height='300'></canvas>
+    </div>
+    <div id='table-container'>
+        <table>
+            <thead>
+                <tr>
+                    <th>Class Name</th>
+                    <th>Probability</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id='name1'>&nbsp;</td>
+                    <td id='prob1'>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td id='name2'>&nbsp;</td>
+                    <td id='prob2'>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td id='name3'>&nbsp;</td>
+                    <td id='prob3'>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td id='name4'>&nbsp;</td>
+                    <td id='prob4'>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td id='name5'>&nbsp;</td>
+                    <td id='prob5'>&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id='clear-container'>
         <button id='clear' onclick="clearCanvas(canvas);">Clear</button>
     </div>
     <script src="main.js"></script>
