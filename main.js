@@ -2,16 +2,12 @@ var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 
 var classNames = ['apple', 'banana', 'bed', 'book', 'bread', 'broom', 'bucket', 'car', 'cat', 'chair', 'circle', 'clock', 'cookie', 'crown', 'cup', 'diamond', 'dog', 'donut', 'door', 'eye',
-'eyeglasses', 'face', 'fish', 'flower', 'fork', 'hand', 'house', 'ice cream', 'key', 'ladder', 'leaf', 'light bulb', 'line', 'mushroom', 'nail', 'pencil', 'pizza', 'smiley face', 'square', 'stairs', 'star', 'stop sign', 'sun', 'table', 'tree', 'triangle', 't-shirt', 'umbrella', 'wheel', 'wine glass']
+'eyeglasses', 'face', 'fish', 'flower', 'fork', 'hand', 'house', 'ice cream', 'key', 'ladder', 'leaf', 'light bulb', 'line', 'mushroom', 'nail', 'pencil', 'pizza', 'smiley face', 'square', 'stairs', 'star', 'stop sign', 'sun', 't-shirt', 'table', 'tree', 'triangle', 'umbrella', 'wheel', 'wine glass']
 var model;
 var coords = [];
 var radius = 5;
 var mouseDown = false;
 ctx.lineWidth = radius*2;
-// table --> tree
-// triangle --> t-shirt
-// t-shirt --> table
-// tree --> triangle
 
 canvas.addEventListener('mousedown', down);
 canvas.addEventListener('mousemove', move);
@@ -19,6 +15,7 @@ canvas.addEventListener('mouseup', predict);
 document.onmouseup = up;
 document.onload = load_model();
 
+////////////////////////////CANVAS FUNCTIONS///////////////////////////////
 function down(e) {
     mouseDown = true;
     move(e)
@@ -49,7 +46,7 @@ function clearCanvas(canvas) {
 ////////////////////////////MODEL PREDICTION///////////////////////////////
 function pixelData(ctx) {
     var alpha = [];
-    var imgData = ctx.getImageData(0,0,canvas.width,canvas.height); // Need to isolate alpha channel, array manip.?
+    var imgData = ctx.getImageData(0,0,canvas.width,canvas.height);
     for (var i = 3; i < imgData.data.length; i+=4) {
         alpha.push(imgData.data[i])
     }
