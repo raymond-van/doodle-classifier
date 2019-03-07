@@ -61,7 +61,7 @@ function pixelData(ctx) {
 
 async function load_model() {
     //load the model 
-    model = await tf.loadModel('model/tfjs_model/model.json')
+    model = await tf.loadLayersModel('https://raw.githubusercontent.com/raymond-van/doodle-classifier/master/model/tfjs_model/model.json');
 }
 
 function predict() {
